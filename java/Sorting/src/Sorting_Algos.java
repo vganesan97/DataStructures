@@ -1,6 +1,7 @@
 /**
- * Created by vishaalganesan on 8/5/16.
+ * Created by vishaalganesan on 8/6/16.
  */
+
 public class Sorting_Algos
 {
 
@@ -34,5 +35,5 @@ public class Sorting_Algos
         return arr;
     }
 
-    public int[] insertion(int[] arr)
 }
+
