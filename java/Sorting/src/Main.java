@@ -35,7 +35,8 @@ public class Main {
         toString(arr);
         System.out.print("Sorted Array: ");
         //sorting_algos.bubble(arr);
-        sorting_algos.insertion(arr);
+        //sorting_algos.insertion(arr);
+        sorting_algos.selection(arr);
         toString(arr);
     }
 }

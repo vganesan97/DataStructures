@@ -55,5 +55,30 @@ public class Sorting_Algos
         return arr;
     }
 
+    //selection sort
+    public static int[] selection(int[] arr)
+    {
+        int l=arr.length;
+
+        for (int i=0; i<l; i++)
+        {
+            int x=arr[i];
+            int y=i;
+
+            for (int j=y+1; j<arr.length; j++)
+            {
+                if (arr[j]<x)
+                {
+                    x=arr[j];
+                    y=j;
+                }
+            }
+
+            swap(y,i,arr);
+        }
+
+        return arr;
+    }
+
 }
 
