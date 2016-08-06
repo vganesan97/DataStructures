@@ -83,7 +83,7 @@ public class Sorting_Algos
     //merge two arrays
     public static int[] merge(int[] arr, int[] arr1)
     {
-        int[] arr3=new int[arr.length+arr1.length];
+        int[] arr3=new int[arr.length+arr1.length-1];
         int ptr;
 
         for (int i=0; i<arr.length; i++)
@@ -95,7 +95,7 @@ public class Sorting_Algos
 
         for (int j=0; j<arr1.length; j++)
         {
-            arr3[ptr+j]=arr1[j];
+            arr3[ptr+j-2]=arr1[j];
         }
 
         return arr3;
