@@ -28,7 +28,6 @@ public class Sorting_Algos
                 if (arr[j] > arr[j + 1])
                 {
                     swap(j, j+ 1, arr);
-
                 }
             }
         }
@@ -101,5 +100,10 @@ public class Sorting_Algos
         return arr3;
     }
 
+    //merge sort
+    public static int[] merges(int[] arr)
+    {
+        return arr;
+    }
 }
 
