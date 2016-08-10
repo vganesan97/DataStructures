@@ -72,7 +72,6 @@ public class Sorting_Algos
                     y=j;
                 }
             }
-
             swap(y,i,arr);
         }
 
@@ -101,9 +100,44 @@ public class Sorting_Algos
     }
 
     //merge sort
-    public static int[] merges(int[] arr)
+    public static int[] merge_sort(int arr[])
     {
-        return arr;
+        int l=arr.length;
+
+        if (l==1)
+        {
+            return arr;
+        }
+        else
+        {
+            int n=l/2;
+            int[] a=new int[n];
+            int[] a2=new int[l-n];
+
+            for (int i=0; i<l; i++)
+            {
+                if (i<n)
+                {
+                    a[i]=arr[i];
+                }
+                else
+                {
+                    a2[i-n]=arr[i];
+                }
+            }
+
+            a=merge_sort(a);
+            a2=merge_sort(a2);
+            arr=merge(a,a2);
+
+            return arr;
+        }
+
     }
+
+
+
+
+
 }
 

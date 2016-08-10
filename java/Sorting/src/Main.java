@@ -57,9 +57,7 @@ public class Main {
         }
 
         toString1(arr);
-        toString1(arr1);
-        System.out.print("Merged Array: ");
-        toString(sorting_algos.merge(arr,arr1));
+        toString2(Sorting_Algos.merge_sort(arr));
         System.out.println();
 
     }
