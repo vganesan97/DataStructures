@@ -99,45 +99,70 @@ public class Sorting_Algos
         return arr3;
     }
 
-    //merge sort
-    public static int[] merge_sort(int arr[])
+    //merge sort helper
+    public static void mergesh(int[] arr, int l, int h, int ub)
     {
-        int l=arr.length;
+        int a=h-l+1;
+        int b=ub-h;
 
-        if (l==1)
+        int[] t1=new int[a];
+        int[] t2=new int[b];
+
+        for (int i=0; i<a; i++)
         {
-            return arr;
+            t1[i]=arr[i+1];
         }
-        else
+        for (int j=0; j<b; j++)
         {
-            int n=l/2;
-            int[] a=new int[n];
-            int[] a2=new int[l-n];
+            t2[j]=arr[h+1+j];
+        }
 
-            for (int i=0; i<l; i++)
+        int i=0;
+        int j=0;
+        int k=1;
+
+        while ((i<a) && (j<b))
+        {
+            if (t1[i]<=t2[j])
             {
-                if (i<n)
-                {
-                    a[i]=arr[i];
-                }
-                else
-                {
-                    a2[i-n]=arr[i];
-                }
+                arr[k]=t1[i];
+                i++;
+            }
+            else
+            {
+                arr[k]=t2[j];
+                j++;
             }
 
-            a=merge_sort(a);
-            a2=merge_sort(a2);
-            arr=merge(a,a2);
-
-            return arr;
+            k++;
         }
-
+        while (i<a)
+        {
+            arr[k]=t1[i];
+            i++;
+            k++;
+        }
+        while (j<b)
+        {
+            arr[k]=t2[j];
+            j++;
+            k++;
+        }
     }
 
+    //merge sort
+    public static int[] merge_sort(int[] arr, int l, int h)
+    {
+        if (l<h)
+        {
+            int mid=(l+h)/2;
 
+            merge_sort(arr,l,mid);
+            merge_sort(arr,mid+1,h);
+            mergesh(arr,l,mid,h);
+        }
 
-
-
+        return arr;
+    }
 }
 

@@ -5,7 +5,8 @@
 import java.util.Random;
 import java.lang.Object;
 
-public class Main {
+public class Main
+{
 
     public static void toString1(int[] arr)
     {
@@ -51,8 +52,8 @@ public class Main {
         for (int i=0; i<l-1; i++)
         {
             int x = r.nextInt(100);
-            arr[i] = x;
             int y=r.nextInt(100);
+            arr[i] = x;
             arr1[i]=y;
         }
 
