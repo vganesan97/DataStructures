@@ -53,12 +53,12 @@ public class Main
         {
             int x = r.nextInt(100);
             int y=r.nextInt(100);
-            arr[i] = x;
+            arr[i]=x;
             arr1[i]=y;
         }
 
         toString1(arr);
-        toString2(Sorting_Algos.merge_sort(arr));
+        toString2(Sorting_Algos.merge_sort(arr,1,l));
         System.out.println();
 
     }
