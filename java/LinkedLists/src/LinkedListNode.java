@@ -8,7 +8,7 @@ public class LinkedListNode
     //each node can contain any type of object or primitive
     //each node needs a pointer to the next node
     //last node points to null
-
+ddddddd
 
     Object data;
     LinkedListNode next;
