@@ -8,6 +8,8 @@ public class Main
         ll.addNode(5);
         ll.addNode(6);
         System.out.print(ll.toString());
+        System.out.print("7777777");
+
     }
 
 }
