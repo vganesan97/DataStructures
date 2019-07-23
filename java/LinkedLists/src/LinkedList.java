@@ -5,7 +5,7 @@
 public class LinkedList
 {
     //starting node
-    public LinkedListNode head;
+    pubdddddddlic LinkedListNode head;
 
     public LinkedList()
     {
